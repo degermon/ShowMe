@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		654F4AA126AF12FB00D33F50 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F4AA026AF12FB00D33F50 /* SearchBar.swift */; };
+		654F4AA426AF1EEE00D33F50 /* TransitionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F4AA326AF1EEE00D33F50 /* TransitionModifier.swift */; };
 		65592FC226ADC3ED00C758CA /* ShowMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FC126ADC3ED00C758CA /* ShowMeApp.swift */; };
 		65592FC426ADC3ED00C758CA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FC326ADC3ED00C758CA /* ContentView.swift */; };
 		65592FC626ADC3F400C758CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65592FC526ADC3F400C758CA /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		654F4AA026AF12FB00D33F50 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		654F4AA326AF1EEE00D33F50 /* TransitionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModifier.swift; sourceTree = "<group>"; };
 		65592FBE26ADC3ED00C758CA /* ShowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65592FC126ADC3ED00C758CA /* ShowMeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowMeApp.swift; sourceTree = "<group>"; };
 		65592FC326ADC3ED00C758CA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		654F4AA226AF1ECF00D33F50 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				654F4AA326AF1EEE00D33F50 /* TransitionModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		65592FB526ADC3EC00C758CA = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		65592FC026ADC3ED00C758CA /* ShowMe */ = {
 			isa = PBXGroup;
 			children = (
+				654F4AA226AF1ECF00D33F50 /* Modifiers */,
 				65592FD126ADC70900C758CA /* View */,
 				65592FD026ADC6F600C758CA /* App */,
 				65592FC526ADC3F400C758CA /* Assets.xcassets */,
@@ -166,6 +177,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				654F4AA426AF1EEE00D33F50 /* TransitionModifier.swift in Sources */,
 				65592FD726ADCDE800C758CA /* OnboardingViewButton.swift in Sources */,
 				65592FD326ADC74000C758CA /* OnboardingView.swift in Sources */,
 				65592FD526ADC80F00C758CA /* OnboardingViewImage.swift in Sources */,

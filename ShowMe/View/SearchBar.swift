@@ -42,6 +42,7 @@ struct SearchBar: View {
                     } //: HSTACK
                 ) //: OVERLAY
                 .padding(.horizontal, 10)
+                .modifier(TransitionModifier())
                 .onTapGesture {
                     self.isEditing = true
                 }
@@ -56,8 +57,7 @@ struct SearchBar: View {
                     Text("Cancel")
                 }) //: BUTTON
                 .padding(.trailing, 10)
-                .transition(.move(edge: .trailing))
-                .animation(.default)
+                .modifier(TransitionModifier())
             }
         } //: HSTACK
     }

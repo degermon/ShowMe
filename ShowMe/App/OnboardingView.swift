@@ -18,9 +18,10 @@ struct OnboardingView: View {
         ZStack {
             VStack(spacing: 20) {
                 OnboardingViewImage()
-                OnboardingViewText()
+                OnboardingViewButton()
             } //: VStack
         } //: ZStack
+        .padding(20)
         .onAppear {
             withAnimation(.easeOut(duration: 1)) {
                 isAnimating = true

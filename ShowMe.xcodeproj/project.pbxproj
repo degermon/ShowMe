@@ -13,7 +13,7 @@
 		65592FC926ADC3F400C758CA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65592FC826ADC3F400C758CA /* Preview Assets.xcassets */; };
 		65592FD326ADC74000C758CA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD226ADC74000C758CA /* OnboardingView.swift */; };
 		65592FD526ADC80F00C758CA /* OnboardingViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD426ADC80F00C758CA /* OnboardingViewImage.swift */; };
-		65592FD726ADCDE800C758CA /* OnboardingViewText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD626ADCDE800C758CA /* OnboardingViewText.swift */; };
+		65592FD726ADCDE800C758CA /* OnboardingViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +25,7 @@
 		65592FCA26ADC3F400C758CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65592FD226ADC74000C758CA /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		65592FD426ADC80F00C758CA /* OnboardingViewImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewImage.swift; sourceTree = "<group>"; };
-		65592FD626ADCDE800C758CA /* OnboardingViewText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewText.swift; sourceTree = "<group>"; };
+		65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				65592FD426ADC80F00C758CA /* OnboardingViewImage.swift */,
-				65592FD626ADCDE800C758CA /* OnboardingViewText.swift */,
+				65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,7 +163,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65592FD726ADCDE800C758CA /* OnboardingViewText.swift in Sources */,
+				65592FD726ADCDE800C758CA /* OnboardingViewButton.swift in Sources */,
 				65592FD326ADC74000C758CA /* OnboardingView.swift in Sources */,
 				65592FD526ADC80F00C758CA /* OnboardingViewImage.swift in Sources */,
 				65592FC426ADC3ED00C758CA /* ContentView.swift in Sources */,

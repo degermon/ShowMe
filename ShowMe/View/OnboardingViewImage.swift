@@ -12,7 +12,7 @@ struct OnboardingViewImage: View {
         Image("inquisitive-chibi")
             .resizable()
             .scaledToFit()
-            .padding(15)
+            .padding(20)
             .clipShape(Circle())
             .overlay(Circle().stroke(Color("ColorCustomLightBlue"), lineWidth: 5))
             .shadow(radius: 7)
@@ -22,5 +22,6 @@ struct OnboardingViewImage: View {
 struct OnboardingImageView_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingViewImage()
+            .padding(20)
     }
 }

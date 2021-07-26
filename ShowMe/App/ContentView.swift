@@ -11,10 +11,12 @@ struct ContentView: View {
     
     // MARK: - PROPERTIES
 
+    @State private var searchText = ""
+    
     // MARK: - BODY
     
     var body: some View {
-        Text("Some content")
+        SearchBar(text: $searchText)
     }
 }
 

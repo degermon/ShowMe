@@ -10,13 +10,20 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: - PROPERTIES
-
+    
     @State private var searchText = ""
     
     // MARK: - BODY
     
     var body: some View {
-        SearchBar(text: $searchText)
+        NavigationView {
+            ScrollView {
+                SearchBar(text: $searchText)
+                    .padding(8)
+                GridLayout(showMe: $searchText)
+            } //: SCROLL
+            .navigationTitle("Show Me!")
+        } //: NAVIGATION
     }
 }
 

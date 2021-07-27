@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65143F3226B05DA2006CBDC6 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65143F3126B05DA2006CBDC6 /* GridLayout.swift */; };
 		654F4AA126AF12FB00D33F50 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F4AA026AF12FB00D33F50 /* SearchBar.swift */; };
 		654F4AA426AF1EEE00D33F50 /* TransitionModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654F4AA326AF1EEE00D33F50 /* TransitionModifier.swift */; };
 		65592FC226ADC3ED00C758CA /* ShowMeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FC126ADC3ED00C758CA /* ShowMeApp.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		65143F3126B05DA2006CBDC6 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		654F4AA026AF12FB00D33F50 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		654F4AA326AF1EEE00D33F50 /* TransitionModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionModifier.swift; sourceTree = "<group>"; };
 		65592FBE26ADC3ED00C758CA /* ShowMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShowMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +45,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65143F3326B0659B006CBDC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		654F4AA226AF1ECF00D33F50 /* Modifiers */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +79,7 @@
 		65592FC026ADC3ED00C758CA /* ShowMe */ = {
 			isa = PBXGroup;
 			children = (
+				65143F3326B0659B006CBDC6 /* Model */,
 				654F4AA226AF1ECF00D33F50 /* Modifiers */,
 				65592FD126ADC70900C758CA /* View */,
 				65592FD026ADC6F600C758CA /* App */,
@@ -104,6 +114,7 @@
 				65592FD426ADC80F00C758CA /* OnboardingViewImage.swift */,
 				65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */,
 				654F4AA026AF12FB00D33F50 /* SearchBar.swift */,
+				65143F3126B05DA2006CBDC6 /* GridLayout.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -184,6 +195,7 @@
 				65592FC426ADC3ED00C758CA /* ContentView.swift in Sources */,
 				654F4AA126AF12FB00D33F50 /* SearchBar.swift in Sources */,
 				65592FC226ADC3ED00C758CA /* ShowMeApp.swift in Sources */,
+				65143F3226B05DA2006CBDC6 /* GridLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

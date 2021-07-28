@@ -10,20 +10,13 @@ import SwiftUI
 struct ContentView: View {
     
     // MARK: - PROPERTIES
-    
-    @State private var searchText = ""
-    
+    @StateObject var fetchResultsData = FetchResultsViewModel()
+
     // MARK: - BODY
     
     var body: some View {
-        NavigationView {
-            ScrollView {
-                SearchBar(text: $searchText)
-                    .padding(8)
-                GridLayout(showMe: $searchText)
-            } //: SCROLL
-            .navigationTitle("Show Me!")
-        } //: NAVIGATION
+        ImagesView()
+            .environmentObject(fetchResultsData)
     }
 }
 

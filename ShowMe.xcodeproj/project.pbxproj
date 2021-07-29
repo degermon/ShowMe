@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		65143F3226B05DA2006CBDC6 /* GridLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65143F3126B05DA2006CBDC6 /* GridLayoutView.swift */; };
+		65143F3226B05DA2006CBDC6 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65143F3126B05DA2006CBDC6 /* GridView.swift */; };
 		65143F3526B1AD78006CBDC6 /* FetchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65143F3426B1AD78006CBDC6 /* FetchResults.swift */; };
 		65143F4626B1C0FD006CBDC6 /* FetchResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65143F4526B1C0FD006CBDC6 /* FetchResultsViewModel.swift */; };
 		65143F4A26B1C717006CBDC6 /* ImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65143F4926B1C717006CBDC6 /* ImagesView.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65143F3126B05DA2006CBDC6 /* GridLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayoutView.swift; sourceTree = "<group>"; };
+		65143F3126B05DA2006CBDC6 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 		65143F3426B1AD78006CBDC6 /* FetchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResults.swift; sourceTree = "<group>"; };
 		65143F4526B1C0FD006CBDC6 /* FetchResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchResultsViewModel.swift; sourceTree = "<group>"; };
 		65143F4926B1C717006CBDC6 /* ImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesView.swift; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 				65592FD426ADC80F00C758CA /* OnboardingViewImage.swift */,
 				65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */,
 				654F4AA026AF12FB00D33F50 /* SearchBar.swift */,
-				65143F3126B05DA2006CBDC6 /* GridLayoutView.swift */,
+				65143F3126B05DA2006CBDC6 /* GridView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -223,7 +223,7 @@
 				65143F4A26B1C717006CBDC6 /* ImagesView.swift in Sources */,
 				654F4AA126AF12FB00D33F50 /* SearchBar.swift in Sources */,
 				65592FC226ADC3ED00C758CA /* ShowMeApp.swift in Sources */,
-				65143F3226B05DA2006CBDC6 /* GridLayoutView.swift in Sources */,
+				65143F3226B05DA2006CBDC6 /* GridView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -27,7 +27,7 @@ struct ImagesView: View {
                             .padding()
                     } else { // there is a fetched data
                         // displaying results
-                        GridLayoutView()
+                        GridView()
                     }
                 } else { // if no data is fetched yet
                     // show loading animation

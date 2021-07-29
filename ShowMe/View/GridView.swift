@@ -1,5 +1,5 @@
 //
-//  GridLayoutView.swift
+//  GridView.swift
 //  ShowMe
 //
 //  Created by Daniel Šuškevič on 2021-07-27.
@@ -8,7 +8,7 @@
 import SwiftUI
 import Kingfisher
 
-struct GridLayoutView: View {
+struct GridView: View {
     
     // MARK: - PROPERTIES
     
@@ -24,7 +24,7 @@ struct GridLayoutView: View {
                         .resizable()
                         .scaledToFit()
                         .cornerRadius(20)
-                
+                        .shadow(radius: 8)
             }
             .padding(8)
         }) //: GRID
@@ -35,6 +35,6 @@ struct GridLayoutView: View {
 
 struct GridLayout_Previews: PreviewProvider {
     static var previews: some View {
-        GridLayoutView().environmentObject(FetchResultsViewModel())
+        GridView().environmentObject(FetchResultsViewModel())
     }
 }

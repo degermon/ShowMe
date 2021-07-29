@@ -18,7 +18,7 @@ struct GridLayoutView: View {
     
     var body: some View {
         LazyVGrid(columns: gridItemLayout, spacing: 12, content: {
-            ForEach(fetchResultsData.fetchedImagesData ?? []) { item in
+            ForEach(fetchResultsData.imagesData ?? []) { item in
                 Image("default")
                     .resizable()
                     .scaledToFit()

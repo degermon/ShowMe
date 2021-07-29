@@ -11,7 +11,7 @@ import Combine
 class FetchResultsViewModel: ObservableObject {
     
     @Published var searchQuerry = "" // search text from searchBar
-    @Published var fetchedImagesData: [FetchItemData]? = nil // fetched data from API
+    @Published var imagesData: [FetchItemData]? = nil // fetched data from API
     // for cancelation of search publisher
     var searchCancellable: AnyCancellable? = nil
     private let API_KEY = "22590677-2336ceb55dc631d789d3e75d2"
@@ -23,7 +23,7 @@ class FetchResultsViewModel: ObservableObject {
             .sink(receiveValue: { str in
                 if str == "" { // if searchQuerry is empty
                     // reset data
-                    self.fetchedImagesData = nil
+                    self.imagesData = nil
                 } else {
                     // search
                     self.searchForImagesWith(keywords: str)
@@ -53,7 +53,7 @@ class FetchResultsViewModel: ObservableObject {
             do {
                 let images = try JSONDecoder().decode(FetchResults.self, from: APIData)
                 DispatchQueue.main.async {
-                    self.fetchedImagesData = images.hits
+                    self.imagesData = images.hits
                 }
             } catch {
                 print(error.localizedDescription)

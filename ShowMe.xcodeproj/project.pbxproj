@@ -117,9 +117,10 @@
 		65592FD026ADC6F600C758CA /* App */ = {
 			isa = PBXGroup;
 			children = (
-				65592FC126ADC3ED00C758CA /* ShowMeApp.swift */,
 				65592FC326ADC3ED00C758CA /* ContentView.swift */,
+				65143F4926B1C717006CBDC6 /* ImagesView.swift */,
 				65592FD226ADC74000C758CA /* OnboardingView.swift */,
+				65592FC126ADC3ED00C758CA /* ShowMeApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -131,7 +132,6 @@
 				65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */,
 				654F4AA026AF12FB00D33F50 /* SearchBar.swift */,
 				65143F3126B05DA2006CBDC6 /* GridLayoutView.swift */,
-				65143F4926B1C717006CBDC6 /* ImagesView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

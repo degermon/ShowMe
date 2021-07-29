@@ -10,7 +10,7 @@ import SwiftUI
 struct ImagesView: View {
     // MARK: - PROPERTIES
     
-    @EnvironmentObject var fetchResultsData: FetchResultsViewModel
+    @EnvironmentObject var fetchResults: FetchResultsViewModel
     
     // MARK: - BODY
     
@@ -18,10 +18,10 @@ struct ImagesView: View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(spacing: 15) {
-                    SearchBar(text: $fetchResultsData.searchQuerry)
+                    SearchBar(text: $fetchResults.searchQuerry)
                 } //: VSTACK
                 
-                if let images = fetchResultsData.fetchedImagesData {
+                if let images = fetchResults.imagesData {
                     if images.isEmpty { // if fetched data is empty
                         Text("No Results Found")
                             .padding()
@@ -29,11 +29,11 @@ struct ImagesView: View {
                         // displaying results
                         GridLayoutView()
                     }
-                } else { // if no data is fetched
-                    // loading screen
-                    if fetchResultsData.searchQuerry != "" {
+                } else { // if no data is fetched yet
+                    // show loading animation
+                    if fetchResults.searchQuerry != "" {
                         ProgressView()
-                            .padding()
+                            .padding(30)
                     }
                 }
             }) //: SCROLL

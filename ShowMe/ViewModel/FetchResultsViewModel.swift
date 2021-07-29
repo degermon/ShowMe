@@ -34,7 +34,7 @@ class FetchResultsViewModel: ObservableObject {
     func searchForImagesWith(keywords: String) {
         let formattedKeywords = formatKeywords(keywords) // change all empty spaces between words with + character
         
-        let urlString = "https://pixabay.com/api/?key=\(API_KEY)&q=\(formattedKeywords)&image_type=photo"
+        let urlString = "https://pixabay.com/api/?key=\(API_KEY)&q=\(formattedKeywords)&image_type=photo&orientation=horizontal&per_page=60"
         let url = parseURL(urlString: urlString) // string to url
         
         let session = URLSession(configuration: .default)

@@ -6,26 +6,28 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct GridLayoutView: View {
     
     // MARK: - PROPERTIES
     
-    private var gridItemLayout = Array(repeating: GridItem(.flexible(minimum: 100, maximum: 400), spacing: 12), count: 3)
+    private var gridItemLayout = Array(repeating: GridItem(.flexible(minimum: 100, maximum: 200), spacing: 8), count: 3)
     @EnvironmentObject var fetchResultsData: FetchResultsViewModel
     
     // MARK: - BODY
     
     var body: some View {
-        LazyVGrid(columns: gridItemLayout, spacing: 12, content: {
+        LazyVGrid(columns: gridItemLayout, spacing: 8, content: {
             ForEach(fetchResultsData.imagesData ?? []) { item in
-                Image("default")
-                    .resizable()
-                    .scaledToFit()
+                    KFImage(URL(string: item.previewURL))
+                        .resizable()
+                        .scaledToFit()
+                        .cornerRadius(20)
+                
             }
-            .padding()
+            .padding(8)
         }) //: GRID
-        .padding(.horizontal)
     }
 }
 

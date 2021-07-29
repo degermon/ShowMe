@@ -37,6 +37,7 @@ struct ImagesView: View {
                     }
                 }
             }) //: SCROLL
+            .padding(.horizontal, 8)
             .navigationTitle("Show Me!")
         } //: NAVIGATION
     }

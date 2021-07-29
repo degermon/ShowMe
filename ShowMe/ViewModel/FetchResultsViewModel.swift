@@ -21,11 +21,10 @@ class FetchResultsViewModel: ObservableObject {
             .removeDuplicates()
             .debounce(for: 1, scheduler: RunLoop.main)
             .sink(receiveValue: { str in
-                if str == "" { // if searchQuerry is empty
-                    // reset data
-                    self.imagesData = nil
+                if str == "" {
+                    // do nothing
                 } else {
-                    // search
+                    self.imagesData = nil // clear fetched data for every new api call
                     self.searchForImagesWith(keywords: str)
                 }
             })

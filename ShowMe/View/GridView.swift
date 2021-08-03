@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Kingfisher
 
 struct GridView: View {
     
@@ -20,11 +19,7 @@ struct GridView: View {
     var body: some View {
         LazyVGrid(columns: gridItemLayout, spacing: 8, content: {
             ForEach(fetchResultsData.imagesData ?? []) { item in
-                    KFImage(URL(string: item.previewURL))
-                        .resizable()
-                        .scaledToFit()
-                        .cornerRadius(20)
-                        .shadow(radius: 8)
+                    GridItemView(item: item)
             }
             .padding(8)
         }) //: GRID

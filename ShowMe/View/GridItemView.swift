@@ -18,10 +18,15 @@ struct GridItemView: View {
     
     var body: some View {
         KFImage(URL(string: item.previewURL))
+            .placeholder {
+                Image("default")
+                    .imageIconModifier()
+            }
             .resizable()
             .scaledToFit()
             .cornerRadius(20)
             .shadow(radius: 8)
+            
     }
 }
 

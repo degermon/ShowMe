@@ -17,9 +17,9 @@ struct ImagesView: View {
     var body: some View {
         NavigationView {
             ScrollView(.vertical, showsIndicators: false, content: {
-                VStack(spacing: 15) {
-                    SearchBar(text: $fetchResults.searchQuerry)
-                } //: VSTACK
+                
+                SearchBar(text: $fetchResults.searchQuerry)
+                
                 if let images = fetchResults.imagesData {
                     if images.isEmpty { // if data is empty
                         Text("No Results Found")
@@ -31,14 +31,14 @@ struct ImagesView: View {
                         if fetchResults.isLoading {
                             ProgressView()
                                 .onAppear(perform: {
-                                        fetchResults.page += 1
-                                        fetchResults.searchForImagesWith(keywords: fetchResults.searchQuerry) // while progressView is shown, fetch new page of images with same search keyword
+                                    fetchResults.page += 1
+                                    fetchResults.searchForImagesWith(keywords: fetchResults.searchQuerry) // while progressView is shown, fetch new page of images with same search keyword
                                 })
                         } else {
                             GeometryReader { reader ->  Color in
                                 
                                 let minY = reader.frame(in: .global).minY
-                                let height = UIScreen.main.bounds.height / 1.3
+                                let height = UIScreen.main.bounds.height / 1.5
                                 
                                 if minY < height {
                                     DispatchQueue.main.async {
@@ -56,6 +56,11 @@ struct ImagesView: View {
                         ProgressView()
                             .padding(30)
                     } // show if searchField is not empty
+                }
+                
+                if fetchResults.imagesData?.isEmpty != true && fetchResults.imagesData != nil { // show only is some data/images is fetched from api
+                    ClearButton()
+                        .padding(.bottom, 10)
                 }
             }) //: SCROLL
             .padding(.horizontal, 8)

@@ -8,25 +8,23 @@
 import SwiftUI
 import Kingfisher
 
-struct GridItemView: View {
+struct ImageView: View {
     
     // MARK: - PROPERTIES
     
-    var item: FetchItemData
+    var urlStringForImageDisplay: String
     
     // MARK: - BODY
     
     var body: some View {
-        KFImage(URL(string: item.previewURL))
+        KFImage(URL(string: urlStringForImageDisplay))
             .placeholder {
                 Image("default")
                     .imageIconModifier()
             }
             .resizable()
             .scaledToFit()
-            .cornerRadius(20)
             .shadow(radius: 8)
-            
     }
 }
 
@@ -34,6 +32,6 @@ struct GridItemView: View {
 
 struct GridItemView_Previews: PreviewProvider {
     static var previews: some View {
-        GridItemView(item: FetchItemData(pageURL: "", previewURL: "https://cdn.pixabay.com/photo/2013/10/15/09/12/flower-195893_150.jpg", webformatURL: "")).previewLayout(.sizeThatFits)
+        ImageView(urlStringForImageDisplay: "https://cdn.pixabay.com/photo/2013/10/15/09/12/flower-195893_150.jpg").previewLayout(.sizeThatFits)
     }
 }

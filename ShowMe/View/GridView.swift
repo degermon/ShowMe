@@ -19,7 +19,7 @@ struct GridView: View {
     var body: some View {
         LazyVGrid(columns: gridItemLayout, spacing: 8, content: {
             ForEach(fetchResultsData.imagesData ?? []) { item in
-                NavigationLink(destination: FullImageView(item: item)) {
+                NavigationLink(destination: DetailImageView(item: item)) {
                     ImageView(urlStringForImageDisplay: item.previewURL)
                         .cornerRadius(20)
                 }

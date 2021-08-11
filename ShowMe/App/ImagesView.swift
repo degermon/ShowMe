@@ -26,7 +26,11 @@ struct ImagesView: View {
                             .padding()
                     } else { // there is a fetched data
                         // displaying results
-                        GridView()
+                        VStack {
+                            GridView()
+                            Spacer() // only to push GridView to top if needed (if not enough images to populate/dispaly in grid view)
+                        } //: VSTACK
+                        .frame(minHeight: UIScreen.main.bounds.height * 0.6, maxHeight: .infinity) // min height for cases when there are only a few images to display, without it GeometryReader would be triggered constantly and requesting api for moreinages (pages) when there are no more images (constant trigger to show ProgressView)
                         
                         if fetchResults.isLoading {
                             ProgressView()

@@ -26,12 +26,8 @@ struct ClearButton: View {
             Text("Clear")
             Spacer()
         })
-        .padding(3) 
-        .foregroundColor(.white)
-        .background(Color("ColorCustomLightPurple"))
+        .modifier(ButtonModifier())
         .font(.title2)
-        .cornerRadius(12)
-        .padding()
     }
 }
 

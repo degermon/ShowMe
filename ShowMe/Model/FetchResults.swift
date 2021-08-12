@@ -12,7 +12,7 @@ struct FetchResults: Decodable {
 }
 
 struct FetchItemData: Decodable, Identifiable {
-    let id = UUID()
+    let id = UUID() // id value also exists in data from api, thus it mus be immutable to not be overwritten
     let pageURL: String
     let previewURL: String
     let webformatURL: String

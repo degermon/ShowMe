@@ -11,6 +11,7 @@ struct ImagesView: View {
     // MARK: - PROPERTIES
     
     @EnvironmentObject var fetchResults: FetchResultsViewModel
+    @State private var showingSettingsView: Bool = false
     
     // MARK: - BODY
     
@@ -70,7 +71,20 @@ struct ImagesView: View {
             .padding(.horizontal, 8)
             .navigationTitle("Show Me!")
             .navigationBarTitleDisplayMode(.large)
+            .toolbar {
+                ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                    Button(action: {
+                        self.showingSettingsView.toggle()
+                    }) {
+                        Image(systemName: "gearshape")
+                            .accentColor(Color.yellow)
+                    } //: ADD BUTTON
+                }
+            }
         } //: NAVIGATION
+        .sheet(isPresented: $showingSettingsView) {
+            SettingsView()
+        } // moved out of toolbar, else dismissal of sheet will not work
     }
 }
 

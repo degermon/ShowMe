@@ -71,17 +71,16 @@ struct ImagesView: View {
             .padding(.horizontal, 8)
             .navigationTitle("Show Me!")
             .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
-                    Button(action: {
-                        self.showingSettingsView.toggle()
-                    }) {
-                        Image(systemName: "gearshape")
-                            .accentColor(Color.yellow)
-                    } //: ADD BUTTON
-                }
-            }
+            .navigationBarItems(trailing:
+                Button(action: {
+                    self.showingSettingsView.toggle()
+                }, label: {
+                    Image(systemName: "gearshape")
+                        .foregroundColor(Color("ColorCustomLightPurple"))
+                })
+            )
         } //: NAVIGATION
+//        .accentColor(Color("ColorCustomLightPurple"))
         .sheet(isPresented: $showingSettingsView) {
             SettingsView()
         } // moved out of toolbar, else dismissal of sheet will not work

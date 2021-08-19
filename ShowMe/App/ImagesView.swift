@@ -25,6 +25,7 @@ struct ImagesView: View {
                     if images.isEmpty { // if data is empty
                         Text("No Results Found")
                             .padding()
+                        Image("Hmm").imageIconModifier()
                     } else { // there is a fetched data
                         // displaying results
                         VStack {
@@ -57,6 +58,8 @@ struct ImagesView: View {
                     } // displaying fetched data
                 } else { // if no data is fetched yet
                     // show loading animation
+                    Image("waitingDog").imageIconModifier()
+                        .padding(.top, 30)
                     if fetchResults.searchQuerry != "" {
                         ProgressView()
                             .padding(30)
@@ -71,6 +74,7 @@ struct ImagesView: View {
             .padding(.horizontal, 8)
             .navigationTitle("Show Me!")
             .navigationBarTitleDisplayMode(.large)
+
             .navigationBarItems(trailing:
                 Button(action: {
                     self.showingSettingsView.toggle()

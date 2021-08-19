@@ -148,6 +148,7 @@
 				654C240926C581D60048229D /* SettingsView.swift */,
 				65592FD226ADC74000C758CA /* OnboardingView.swift */,
 				65592FC126ADC3ED00C758CA /* ShowMeApp.swift */,
+				654C240726C02FEB0048229D /* DetailImageView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -161,7 +162,6 @@
 				65143F3126B05DA2006CBDC6 /* GridView.swift */,
 				654C23F926B999020048229D /* ImageView.swift */,
 				654C240526BAF7AE0048229D /* ClearButton.swift */,
-				654C240726C02FEB0048229D /* DetailImageView.swift */,
 				654C240F26C822D90048229D /* FormRowStaticView.swift */,
 			);
 			path = View;

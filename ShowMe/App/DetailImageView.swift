@@ -30,7 +30,6 @@ struct DetailImageView: View {
                 .font(.footnote)
             }
         }
-        .navigationTitle("Interesting...") // Not sure how to call it at the moment
         .navigationBarTitleDisplayMode(.automatic)
         .padding()
     }

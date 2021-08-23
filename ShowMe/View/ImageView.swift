@@ -18,6 +18,9 @@ struct ImageView: View {
     
     var body: some View {
         KFImage(URL(string: urlStringForImageDisplay))
+            .onFailure { error in
+                print("Failed to locad image: \(error)")
+            }
             .placeholder {
                 Image("default")
                     .imageIconModifier()

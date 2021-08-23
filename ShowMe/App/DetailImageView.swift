@@ -14,6 +14,24 @@ struct DetailImageView: View {
     
     var item: FetchItemData
     
+    // MARK: - FUNCTIONS
+    
+    func saveImage(with urlString : String) {
+        guard let url = URL.init(string: urlString) else {
+            return
+        }
+        let resource = ImageResource(downloadURL: url)
+        
+        KingfisherManager.shared.retrieveImage(with: resource, options: nil, progressBlock: nil) { result in
+            switch result {
+            case .success(let value):
+                UIImageWriteToSavedPhotosAlbum(value.image, nil, nil, nil)
+            case .failure(let error):
+                print("Error: \(error)")
+            }
+        }
+    }
+    
     // MARK: - BODY
     
     var body: some View {
@@ -28,6 +46,16 @@ struct DetailImageView: View {
                     Image(systemName: "arrow.up.right.square")
                 }
                 .font(.footnote)
+            }
+            
+            HStack {
+                Button(action: {
+                    saveImage(with: item.webformatURL)
+                }, label: {
+                    Spacer()
+                    Text("Save Image")
+                    Spacer()
+                }).modifier(ButtonModifier())
             }
         }
         .navigationBarTitleDisplayMode(.automatic)

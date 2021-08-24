@@ -27,6 +27,7 @@ struct ClearButton: View {
             Spacer()
         })
         .modifier(ButtonModifier())
+        .padding()
         .font(.title2)
     }
 }

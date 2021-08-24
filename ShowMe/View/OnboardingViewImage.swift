@@ -14,7 +14,7 @@ struct OnboardingViewImage: View {
             .scaledToFit()
             .padding(20)
             .clipShape(Circle())
-            .overlay(Circle().stroke(Color("ColorCustomLightBlue"), lineWidth: 5))
+            .overlay(Circle().stroke(Color("ColorCustomLightPurple"), lineWidth: 5))
             .shadow(radius: 7)
     }
 }

@@ -27,9 +27,9 @@ struct OnboardingViewButton: View {
             }
             .padding(20)
             .font(.largeTitle)
-            .background(Capsule().strokeBorder(Color("ColorCustomLightBlue"), lineWidth: 5))
+            .background(Capsule().strokeBorder(Color("ColorCustomLightPurple"), lineWidth: 5))
         }) //: BUTTON
-        .accentColor(Color("ColorCustomLightBlue"))
+        .accentColor(Color("ColorCustomLightPurple"))
     }
 }
 
@@ -38,7 +38,7 @@ struct OnboardingViewButton: View {
 struct OnboardingScreenText_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingViewButton()
-            .background(Color.gray) // Just to better see the preview
+            .background(Color.black) // Just to better see the preview
             .previewLayout(.sizeThatFits)
     }
 }

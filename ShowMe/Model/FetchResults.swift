@@ -16,4 +16,5 @@ struct FetchItemData: Decodable, Identifiable {
     let pageURL: String
     let previewURL: String
     let webformatURL: String
+    let largeImageURL: String
 }

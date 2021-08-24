@@ -48,15 +48,31 @@ struct DetailImageView: View {
                 .font(.footnote)
             }
             
-            HStack {
+            GroupBox(label: Text("Save Image to photo library"), content: {
+                Button(action: {
+                    saveImage(with: item.previewURL)
+                }, label: {
+                    Spacer()
+                    Text("Save small")
+                    Spacer()
+                }).modifier(ButtonModifier())
+                
                 Button(action: {
                     saveImage(with: item.webformatURL)
                 }, label: {
                     Spacer()
-                    Text("Save Image")
+                    Text("Save medium")
                     Spacer()
                 }).modifier(ButtonModifier())
-            }
+                
+                Button(action: {
+                    saveImage(with: item.largeImageURL)
+                }, label: {
+                    Spacer()
+                    Text("Save large")
+                    Spacer()
+                }).modifier(ButtonModifier())
+            })
         }
         .navigationBarTitleDisplayMode(.automatic)
         .padding()
@@ -67,6 +83,6 @@ struct DetailImageView: View {
 
 struct FullImageView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailImageView(item: FetchItemData(pageURL: "", previewURL: "", webformatURL: "https://pixabay.com/get/g7e987b88da258d76ea0d6e562d19269191a25e0e3a1e59c76a2b705ccef35013c82a10d935adcf4eff1f2b122c7575a49c037d451634fb950b3b7aaa80a642d4_640.jpg"))
+        DetailImageView(item: FetchItemData(pageURL: "https://pixabay.com/photos/spring-bird-bird-tit-spring-blue-2295434/", previewURL: "", webformatURL: "https://pixabay.com/get/g3a342d69ddab28859b0ae13374ad246e63d8d2bdc2d4b01f64b767d308c68c6370dd1730d3ac86d8da4cb8ab13881dd8516cad495e6aa0bcaeb67256a5083817_640.jpg", largeImageURL: ""))
     }
 }

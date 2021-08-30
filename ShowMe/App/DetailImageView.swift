@@ -46,7 +46,7 @@ struct DetailImageView: View {
                     Image(systemName: "arrow.up.right.square")
                 }
                 .font(.footnote)
-            }
+            } //: BOX
             
             GroupBox(label: Text("Save Image to photo library"), content: {
                 Button(action: {
@@ -72,8 +72,8 @@ struct DetailImageView: View {
                     Text("Save large")
                     Spacer()
                 }).modifier(ButtonModifier())
-            })
-        }
+            }) //: BOX
+        } //: VSTACK
         .navigationBarTitleDisplayMode(.automatic)
         .padding()
     }
@@ -83,6 +83,6 @@ struct DetailImageView: View {
 
 struct FullImageView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailImageView(item: FetchItemData(pageURL: "https://pixabay.com/photos/spring-bird-bird-tit-spring-blue-2295434/", previewURL: "", webformatURL: "https://pixabay.com/get/g3a342d69ddab28859b0ae13374ad246e63d8d2bdc2d4b01f64b767d308c68c6370dd1730d3ac86d8da4cb8ab13881dd8516cad495e6aa0bcaeb67256a5083817_640.jpg", largeImageURL: ""))
+        DetailImageView(item: FetchItemData(pageURL: "https://pixabay.com/photos/spring-bird-bird-tit-spring-blue-2295434/", previewURL: "test", webformatURL: "https://pixabay.com/get/g3a342d69ddab28859b0ae13374ad246e63d8d2bdc2d4b01f64b767d308c68c6370dd1730d3ac86d8da4cb8ab13881dd8516cad495e6aa0bcaeb67256a5083817_640.jpg", largeImageURL: "test"))
     }
 }

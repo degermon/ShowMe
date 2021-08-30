@@ -10,12 +10,19 @@ import Combine
 
 class FetchResultsViewModel: ObservableObject {
     
-    @Published var searchQuerry = "" // search text from searchBar
+    @Published var searchQuerry = "" {
+        didSet {
+            if searchQuerry.count > searchQuerrycharactersLimit && oldValue.count <= searchQuerrycharactersLimit {
+                           searchQuerry = oldValue
+            } // limit max search querry
+        }
+    } // search text from searchBar
     @Published var imagesData: [FetchItemData]? = nil // fetched data from API
     @Published var page: Int = 1
     @Published var isLoading: Bool = false // bool for current call
     var searchCancellable: AnyCancellable? = nil     // for cancelation of search publisher
     private let API_KEY = "22590677-2336ceb55dc631d789d3e75d2"
+    private var searchQuerrycharactersLimit = 100 // max search querry is 100 characters
     
     init() {
         searchCancellable = $searchQuerry

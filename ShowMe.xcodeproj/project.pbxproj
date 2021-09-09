@@ -28,6 +28,7 @@
 		65592FD326ADC74000C758CA /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD226ADC74000C758CA /* OnboardingView.swift */; };
 		65592FD526ADC80F00C758CA /* OnboardingViewImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD426ADC80F00C758CA /* OnboardingViewImage.swift */; };
 		65592FD726ADCDE800C758CA /* OnboardingViewButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65592FD626ADCDE800C758CA /* OnboardingViewButton.swift */; };
+		655A010B26EA76330086AD33 /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = 655A010A26EA76330086AD33 /* AlertToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65143F4E26B2F824006CBDC6 /* Kingfisher in Frameworks */,
+				655A010B26EA76330086AD33 /* AlertToast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,6 +187,7 @@
 			name = ShowMe;
 			packageProductDependencies = (
 				65143F4D26B2F824006CBDC6 /* Kingfisher */,
+				655A010A26EA76330086AD33 /* AlertToast */,
 			);
 			productName = ShowMe;
 			productReference = 65592FBE26ADC3ED00C758CA /* ShowMe.app */;
@@ -215,6 +218,7 @@
 			mainGroup = 65592FB526ADC3EC00C758CA;
 			packageReferences = (
 				65143F4C26B2F824006CBDC6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				655A010926EA76330086AD33 /* XCRemoteSwiftPackageReference "AlertToast" */,
 			);
 			productRefGroup = 65592FBF26ADC3ED00C758CA /* Products */;
 			projectDirPath = "";
@@ -458,6 +462,14 @@
 				minimumVersion = 6.3.0;
 			};
 		};
+		655A010926EA76330086AD33 /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -465,6 +477,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 65143F4C26B2F824006CBDC6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		655A010A26EA76330086AD33 /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 655A010926EA76330086AD33 /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

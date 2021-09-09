@@ -7,12 +7,16 @@
 
 import SwiftUI
 import Kingfisher
+import AlertToast
 
 struct DetailImageView: View {
     
     // MARK: - PROPERTIES
     
     var item: FetchItemData
+    @State private var showLoadingToast = false
+    @State private var showSuccessToast = false
+    @State private var showFailureToast = false
     
     // MARK: - FUNCTIONS
     
@@ -26,8 +30,10 @@ struct DetailImageView: View {
             switch result {
             case .success(let value):
                 UIImageWriteToSavedPhotosAlbum(value.image, nil, nil, nil)
+                showSuccessToast = true
             case .failure(let error):
                 print("Error: \(error)")
+                showFailureToast = true
             }
         }
     }
@@ -51,6 +57,7 @@ struct DetailImageView: View {
             GroupBox(label: Text("Save Image to photo library"), content: {
                 Button(action: {
                     saveImage(with: item.previewURL)
+                    showLoadingToast = true
                 }, label: {
                     Spacer()
                     Text("Save small")
@@ -59,6 +66,7 @@ struct DetailImageView: View {
                 
                 Button(action: {
                     saveImage(with: item.webformatURL)
+                    showLoadingToast = true
                 }, label: {
                     Spacer()
                     Text("Save medium")
@@ -67,6 +75,7 @@ struct DetailImageView: View {
                 
                 Button(action: {
                     saveImage(with: item.largeImageURL)
+                    showLoadingToast = true
                 }, label: {
                     Spacer()
                     Text("Save large")
@@ -76,6 +85,15 @@ struct DetailImageView: View {
         } //: VSTACK
         .navigationBarTitleDisplayMode(.automatic)
         .padding()
+        .toast(isPresenting: $showLoadingToast, duration: 1, tapToDismiss: true, alert: {
+            AlertToast(type: .regular, title: "Saving...")
+        }, onTap: {}, completion: {})
+        .toast(isPresenting: $showSuccessToast) {
+            AlertToast(type: .complete(Color.green), title: "Saved")
+        }
+        .toast(isPresenting: $showFailureToast) {
+            AlertToast(type: .error(Color.red), title: "Failure")
+        }
     }
 }
 
